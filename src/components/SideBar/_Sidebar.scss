@@ -1,0 +1,64 @@
+.SideBar {
+    position: fixed;
+    left: -200px;
+    height: 100vh;
+    width: 240px;
+    display: grid;
+    grid-template-columns: 200px 40px;
+    background: brown;
+    z-index: 1;
+    .info{
+        display: grid;
+        grid-template-columns: 1fr;
+        .menu{
+            justify-self: center;
+            .menuIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../images/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -32px;
+            }
+            .menuIcon:hover {
+                background-position-x: -32px;
+            }
+            .xIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../images/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -64px;
+            }
+            .xIcon:hover {
+                background-position-x: -32px;
+            }
+        }
+        .title{
+
+            .rotator{
+                height: 0px;
+                width: 0px;
+                display: flex;
+                justify-content: center;
+                h6{
+                    width: 200px;
+                    width: 200px;
+                    transform: rotateZ(-90deg);
+                }
+            }
+        }
+    }
+
+    .menuLinks{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 40px;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        top: 25px;
+        h5{
+            margin-left: 20px;
+        }
+    }
+}

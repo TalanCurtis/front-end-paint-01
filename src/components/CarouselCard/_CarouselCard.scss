@@ -1,0 +1,96 @@
+.CarouselCard {
+    margin-left: 12px;
+    height: 340px;
+    width: 260px;
+
+    .mainImage {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 3fr 1fr;
+        .bgImage{
+            width: 100%;
+            grid-column: 1/3;
+            grid-row: 1/3;
+            mask-image: linear-gradient(45deg, transparent 14px, black 0);
+            z-index: -1;
+        }
+        .likes{
+            grid-column: 2;
+            grid-row: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .heartIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../images/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -96px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .info {
+        background: linear-gradient(135deg, transparent 14px, white 0) bottom left;
+        width: 200px;
+        height: 80px;
+        padding: 30px;
+        h5{
+            color: $textDark;
+        }
+        div{
+            width: 100%;
+            height: 100%;
+            overflow-wrap: break-word;
+            p{
+                color: $textMid;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        justify-content: space-between;
+        border: rgba(0, 0, 0, 0.164) 2px solid;
+        background-color: white;
+        .footerInfo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-right: rgba(0, 0, 0, 0.164) 2px solid;
+            padding-left: 4px;
+            padding-right: 10px;
+            p{
+                color: $textDark;
+            }
+            .commentImg {
+                margin-right: 5px;
+                width: 30px;
+                height: 30px;
+            }
+            .commentIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../images/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-y: -96px;
+                background-position-x: -32px;
+            }
+        }
+
+        .trippleDotContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 40px;
+            border-left: rgba(0, 0, 0, 0.164) 2px solid;
+            .trippleDotIcon {
+                width: 32px;
+                height: 32px;
+                background: url('../images/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+                background-position-x: -64px;
+            }
+        }
+    }
+}

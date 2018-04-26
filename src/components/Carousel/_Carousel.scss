@@ -1,0 +1,35 @@
+.baseGrid{
+    overflow: hidden;
+    .Carousel {
+        position: relative;
+        // Hidding overflow so scrolled cards don't show up in other grid cells.
+        overflow: hidden;
+        grid-column: 2;
+        header {
+            display: flex;
+            padding: 5px;
+            align-items: center; 
+            // Used sprite sheet to have unique hover effect on cheveron image.
+            .rightCheveron,
+            .leftCheveron {
+                margin-right: 6px;
+                width: 32px;
+                height: 32px;
+                background: url('../images/spriteSheet.png') top left no-repeat;
+                background-size: 128px 128px;
+            }
+            .rightCheveron:hover,
+            .leftCheveron:hover {
+                background-position-x: -32px;
+            }
+            .rightCheveron {
+                transform: scaleX(-1)
+            }
+        }
+        .slideContainer {
+            display: flex;
+            position: relative;
+            left: 0px;
+        }
+    }
+}
